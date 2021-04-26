@@ -4,7 +4,7 @@ RUN mkdir /app
 # RUN git config --global http.sslVerify false 
 ADD . /app/
 WORKDIR /app
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o interval_merger .
+RUN ls -al; CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o interval_merger .
 
 FROM scratch
 LABEL maintainer="Michael Oberdorf <michael.oberdorf@bridging-it.de>"
