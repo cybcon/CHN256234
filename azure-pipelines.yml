@@ -6,7 +6,7 @@ name: '$(Date:yyyy-MM-dd)$(Rev:.rr)__$(SourceBranchName)'
 
 # trigger only on master branch commits
 trigger:
-- master
+- main
 
 resources:
 - repo: self
