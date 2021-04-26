@@ -1,0 +1,39 @@
+# Docker
+# Build a Docker image 
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+name: '$(Date:yyyy-MM-dd)$(Rev:.rr)__$(SourceBranchName)'
+
+# trigger only on master branch commits
+trigger:
+- master
+
+resources:
+- repo: self
+
+variables:
+  VersionNumber: '1.0.0'
+
+stages:
+- stage: Build
+  displayName: 'Build #CHN256234 - Interval Merger'
+  jobs:  
+  - job: Build
+    displayName: Build Docker Image
+    pool:
+      vmImage: 'ubuntu-18.04'
+    steps:
+      # build docker image and push it to registry
+      - task: Docker@2
+        displayName: 'Building and pushing the repository'
+        inputs:
+          containerRegistry: 'Docker Hub (OITC)'
+          repository: 'CHN256234'
+          command: 'buildAndPush'
+          Dockerfile: '$(Build.Repository.LocalPath)/Dockerfile'
+          buildContext: '.'
+          tags: |
+            $(VersionNumber).$(Build.BuildId)
+            $(VersionNumber)
+            latest
+
