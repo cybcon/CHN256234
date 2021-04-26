@@ -18,3 +18,4 @@ USER 5200:5200
 WORKDIR /app
 
 ENTRYPOINT ["/app/interval_merger"]
+CMD ["-i", "[25,30] [2,19] [14, 23] [4,8]"]
