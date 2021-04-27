@@ -71,10 +71,10 @@ def create_test_data(amount_records):
         if record_number == 0:
             test_data_object.write('[')
         if g_valid_data == True:
-            interval = (create_valid_intervall_string() + ',')
+            interval = (create_valid_intervall_string() + ' ')
             if g_verbose_mode == True:
                 print(str(record_number + 1) + ' ' + interval)
-            test_data_object.write(create_valid_intervall_string())
+            test_data_object.write(create_valid_intervall_string() + ',')
         else:
             if random.randint(0, 19) == 0:
                 # 5% chance to create an invalid record consisting of
@@ -102,10 +102,10 @@ def create_test_data(amount_records):
                 test_data_object.write(interval)
             else:
                 # create a valid record
-                interval = (create_valid_intervall_string() + ',')
+                interval = (create_valid_intervall_string() + ' ')
                 if g_verbose_mode == True:
                     print(str(record_number + 1) + ' ' + interval)
-                test_data_object.write(create_valid_intervall_string())
+                test_data_object.write(create_valid_intervall_string() + ',')
 
     test_data_object.write(']')
     # Close file for randeom data
