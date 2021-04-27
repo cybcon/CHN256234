@@ -34,7 +34,6 @@ stages:
           Dockerfile: '$(Build.Repository.LocalPath)/Dockerfile'
           buildContext: '.'
           tags: |
-            $(VersionNumber).$(Build.BuildId)
             $(VersionNumber)
             latest
 
