@@ -11,7 +11,8 @@ This intervals needs to be in a json format as described below.
 
 The input needs to be in a json format, consists of an array representation in depth of 2.
 The main array collect the different intervals:
-```json
+
+```
 [
       <interval1>,
       <interval2>,
@@ -101,7 +102,7 @@ docker run --rm oitc/chn256234:latest -i "[[25,30],[2,19],[14,23],[4,8]]"
 
 ### Azure DevOps CI/CD pipeline script
 
-Inside this repo, there is also an Azure DevOps CI/CD build pipeline definition: [`azure-pipeline.yaml`].
+Inside this repo, there is also an Azure DevOps CI/CD build pipeline definition: [`azure-pipelines.yml`](azure-pipelines.yml).
 This can also be used to build the docker container and automatically push to a docker repository.
 
 
