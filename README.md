@@ -93,6 +93,14 @@ example:
 ```
 
 
+A ready to use docker image can be pulled from Docker Hub: https://hub.docker.com/r/oitc/chn256234
+
+```
+docker run --rm oitc/chn256234:latest -i "[[25,30],[2,19],[14,23],[4,8]]"
+```
+
+
+
 ### Azure DevOps CI/CD pipeline script
 
 Inside this repo, there is also an Azure DevOps CI/CD build pipeline definition: [`azure-pipeline.yaml`].
