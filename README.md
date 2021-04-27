@@ -111,7 +111,7 @@ This can also be used to build the docker container and automatically push to a 
 - Resilience:
   - Map input parameters to a struct, invalid values will be ignored
   - Large input parameters over command line will not be processed due to bash input limitations
-  - Large input via input file: **TODO**
+  - Large input via input file: due to the static linked compiled and the small solution, large files up to 1 mio intervals can be processed without issues
 - Runtime metrics:
   - Azure VM parameters:
     - Region: West Europe
