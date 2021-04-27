@@ -1,11 +1,12 @@
 # CHN256234
 CHN256234 - Programming request from a customer for a new project for [bridgingIT GmbH](https://www.bridging-it.de/).
 
+see also: [Coding Task](./doc/Coding-Task.md)
+
 ## Abstract
 
 This small example in golang will process integer intervals.
 This intervals needs to be in a json format as described below.
-
 
 ## Json input format
 
@@ -98,16 +99,30 @@ A ready to use docker image can be pulled from Docker Hub: https://hub.docker.co
 docker run --rm oitc/chn256234:latest -i "[[25,30],[2,19],[14,23],[4,8]]"
 ```
 
-
-
 ### Azure DevOps CI/CD pipeline script
 
 Inside this repo, there is also an Azure DevOps CI/CD build pipeline definition: [`azure-pipelines.yml`](azure-pipelines.yml).
 This can also be used to build the docker container and automatically push to a docker repository.
 
 
+## FAQ
 
-## See also
+- Raw coding time of this solution: ~4h
+- Resilience:
+  - Map input parameters to a struct, invalid values will be ignored
+  - Large input parameters over command line will not be processed due to bash input limitations
+  - Large input via input file: **TODO**
+- Runtime metrics:
 
-- [Coding Task](./doc/Coding-Task.md)
-
+| # of intervals | runtime | memory consumption |
+|----------------|---------|--------------------|
+|              4 |         |                    |
+|             50 |         |                    |
+|            100 |         |                    |
+|          1.000 |         |                    |
+|          5.000 |         |                    |
+|         10.000 |         |                    |
+|         50.000 |         |                    |
+|        100.000 |         |                    |
+|        500.000 |         |                    |
+|      1.000.000 |         |                    |
