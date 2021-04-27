@@ -3,7 +3,7 @@ RUN apk add --no-cache git
 RUN mkdir /app
 # RUN git config --global http.sslVerify false 
 ADD . /app/
-WORKDIR /app
+WORKDIR /app/src/interval_merger
 RUN ls -al; CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o interval_merger .
 
 FROM scratch
@@ -18,4 +18,5 @@ USER 5200:5200
 WORKDIR /app
 
 ENTRYPOINT ["/app/interval_merger"]
-CMD ["-i", "[25,30] [2,19] [14, 23] [4,8]"]
+#CMD ["-i", "[[25,30],[2,19],[14,23],[4,8]]"]
+CMD ["-h"]
