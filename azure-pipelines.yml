@@ -39,7 +39,7 @@ stages:
         displayName: 'Building and pushing the repository'
         inputs:
           containerRegistry: $(dockerServiceConnection)
-          repository: 'CHN256234'
+          repository: 'oitc/CHN256234'
           command: 'buildAndPush'
           #command: 'build'
           Dockerfile: '$(Build.Repository.LocalPath)/Dockerfile'
