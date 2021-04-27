@@ -72,6 +72,34 @@ interval_merger.exe -i "[[25,30],[2,19],[14,23],[4,8]]"
 [[2,23][25,30]]
 ```
 
+## Build and runtime alternatives
+
+### Docker
+
+You will have a [`Dockerfile`](./Dockerfile) inside this repo to build a docker image out of the golang source.
+
+Example:
+```
+git clone https://github.com/cybcon/CHN256234.git
+docker build -t interval_merger:latest ./CHN256234/
+```
+
+After building the image, you can run the image
+example:
+
+```
+# docker run --rm interval_merger -i "[[25,30],[2,19],[14,23],[4,8]]"
+[[2,23][25,30]]
+```
+
+
+### Azure DevOps CI/CD pipeline script
+
+Inside this repo, there is also an Azure DevOps CI/CD build pipeline definition: [`azure-pipeline.yaml`].
+This can also be used to build the docker container and automatically push to a docker repository.
+
+
+
 ## See also
 
 - [Coding Task](./doc/Coding-Task.md)
