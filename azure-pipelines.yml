@@ -29,8 +29,8 @@ stages:
         inputs:
           containerRegistry: 'Docker Hub (OITC)'
           repository: 'CHN256234'
-          #command: 'buildAndPush'
-          command: 'build'
+          command: 'buildAndPush'
+          #command: 'build'
           Dockerfile: '$(Build.Repository.LocalPath)/Dockerfile'
           buildContext: '.'
           tags: |
