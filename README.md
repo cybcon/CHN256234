@@ -119,18 +119,21 @@ This can also be used to build the docker container and automatically push to a 
     - Size: Standard_D4as_v4 - 4 vcpus, 16 GiB memory
     - OS disk type: Premium SSD
   - runtime measurement with the Linux command: `time`
+  - memory consumption measurement with the Linux command: `/usr/bin/time -v`
 
 
-| intervals |  runtime | memory consumption |
-|----------:|---------:|-------------------:|
-|         5 | 0m0.002s |                    |
-|        50 | 0m0.002s |                    |
-|       100 | 0m0.002s |                    |
-|       500 | 0m0.003s |                    |
-|     1.000 | 0m0.003s |                    |
-|     5.000 | 0m0.008s |                    |
-|    10.000 | 0m0.014s |                    |
-|    50.000 | 0m0.065s |                    |
-|   100.000 | 0m0.131s |                    |
-|   500.000 | 0m0.651s |                    |
-| 1.000.000 | 0m1.297s |                    |
+| intervals |  runtime | memory consumption (max rss in kbytes) |
+|----------:|---------:|---------------------------------------:|
+|         5 | 0m0.002s |                                  7.820 |
+|        50 | 0m0.002s |                                  5.904 |
+|       100 | 0m0.002s |                                  5.800 |
+|       500 | 0m0.003s |                                  5.836 |
+|     1.000 | 0m0.003s |                                  9.896 |
+|     5.000 | 0m0.008s |                                  7.956 |
+|    10.000 | 0m0.014s |                                 12.296 |
+|    50.000 | 0m0.065s |                                 17.220 |
+|   100.000 | 0m0.131s |                                 27.176 |
+|   500.000 | 0m0.651s |                                 90.724 |
+| 1.000.000 | 0m1.297s |                                204.096 |
+
+
