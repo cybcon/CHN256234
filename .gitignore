@@ -17,6 +17,7 @@
 # Eclipse
 .project
 .settings/**
+.pydevproject
 
 # Visual Studio Code
 .vscode/**

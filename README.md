@@ -113,16 +113,23 @@ This can also be used to build the docker container and automatically push to a 
   - Large input parameters over command line will not be processed due to bash input limitations
   - Large input via input file: **TODO**
 - Runtime metrics:
+  - using the docker container: `oitc/chn256234:latest`
+  - on Azure VM:
+    - Region: West Europe
+    - Image: Ubuntu Server 18.04 LTS - Gen 1
+    - Size: Standard_D4as_v4 - 4 vcpus, 16 GiB memory
+    - OS disk type: Premium SSD
+    - Docker Version: 20.10.2
 
-| # of intervals | runtime | memory consumption |
-|----------------|---------|--------------------|
-|              4 |         |                    |
-|             50 |         |                    |
-|            100 |         |                    |
-|          1.000 |         |                    |
-|          5.000 |         |                    |
-|         10.000 |         |                    |
-|         50.000 |         |                    |
-|        100.000 |         |                    |
-|        500.000 |         |                    |
-|      1.000.000 |         |                    |
+| intervals | runtime | memory consumption |
+|----------:|--------:|-------------------:|
+|         4 |         |                    |
+|        50 |         |                    |
+|       100 |         |                    |
+|     1.000 |         |                    |
+|     5.000 |         |                    |
+|    10.000 |         |                    |
+|    50.000 |         |                    |
+|   100.000 |         |                    |
+|   500.000 |         |                    |
+| 1.000.000 |         |                    |

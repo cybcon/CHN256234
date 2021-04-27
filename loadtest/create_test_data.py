@@ -61,13 +61,15 @@ def create_test_data(amount_records):
 
     # Open file for randeom data
     if g_valid_data == True:
-        test_data_file_name = 'test_data_valid_intervals.txt'
+        test_data_file_name = str(amount_records) + '_intervals.json'
     else:
-        test_data_file_name = 'test_data_invalid_intervals.txt'
+        test_data_file_name = str(amount_records) + '_invalid_intervals.json'
     test_data_object = open(test_data_file_name , 'w')
 
     # Create random data
     for record_number in range(amount_records):
+        if record_number == 0:
+            test_data_object.write('[')
         if g_valid_data == True:
             interval = (create_valid_intervall_string() + ' ')
             if g_verbose_mode == True:
@@ -94,17 +96,18 @@ def create_test_data(amount_records):
                 else:
                     interval_lower_value = random.randint(-2147483647, 2147483647)
                     interval_higher_value = random_string
-                interval = '[' + str(interval_lower_value) + ',' + str(interval_higher_value)+']'
+                interval = '[' + str(interval_lower_value) + ',' + str(interval_higher_value)+'],'
                 if g_verbose_mode == True:
                     print(str(record_number + 1) + ' ' + interval)
                 test_data_object.write(interval)
             else:
                 # create a valid record
-                interval = (create_valid_intervall_string() + ' ')
+                interval = (create_valid_intervall_string() + ',')
                 if g_verbose_mode == True:
                     print(str(record_number + 1) + ' ' + interval)
-                test_data_object.write(create_valid_intervall_string() + ' ')
+                test_data_object.write(create_valid_intervall_string())
 
+    test_data_object.write(']')
     # Close file for randeom data
     test_data_object.close()
 
