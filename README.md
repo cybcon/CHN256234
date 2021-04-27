@@ -1,5 +1,12 @@
 # CHN256234
-CHN256234 - Programming request
+CHN256234 - Programming request from a customer for a new project for [bridgingIT GmbH](https://www.bridging-it.de/).
+
+## Abstract
+
+This small solution in golang will merge intervals in integer
+
+
+
 
 ## Build
 
@@ -20,9 +27,15 @@ Usage of interval_merger.exe:
         A json string that contains the intervals
 ```
 
-
 ### example
 
 ```
-interval_merger.exe -i "[[25,30],[2,19],[14, 23],[4,8]]"
+interval_merger.exe -i "[[25,30],[2,19],[14,23],[4,8]]"
+[[2,23][25,30]]
 ```
+
+
+## See also
+
+- [Coding Task](./doc/Coding-Task.md)
+
