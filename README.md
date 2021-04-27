@@ -7,8 +7,6 @@ This small example in golang will process integer intervals.
 This intervals needs to be in a json format as described below.
 
 
-read in integer intervals, given in a json format via command line or input file, will be parsed and 
-
 ## Json input format
 
 The input needs to be in a json format, consists of an array representation in depth of 2.
