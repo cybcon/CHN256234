@@ -137,3 +137,7 @@ This can also be used to build the docker container and automatically push to a 
 | 1.000.000 | 0m1.297s |                                204.096 |
 
 
+## other solutions
+- Bastian Appenzeller, implemented in Python: https://github.com/bridgingIT/daimler_application
+- Christian Will, implemented in C#: https://github.com/dnkh/MergeIntervals
+
