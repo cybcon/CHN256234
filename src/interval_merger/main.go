@@ -104,7 +104,11 @@ func merge(ivs []Interval) []Interval {
 func outputMergedJson(m []Interval) {
 	fmt.Print("[")
 	for i := 0; i < len(m); i++ {
-		fmt.Print("[", m[i].Lo, ",", m[i].Hi, "]")
+		if i == 0 {
+			fmt.Print("[", m[i].Lo, ",", m[i].Hi, "]")
+		} else {
+			fmt.Print(",[", m[i].Lo, ",", m[i].Hi, "]")
+		}
 	}
 	fmt.Println("]")
 }
