@@ -69,7 +69,7 @@ Usage of interval_merger.exe:
 
 ```
 interval_merger.exe -i "[[25,30],[2,19],[14,23],[4,8]]"
-[[2,23][25,30]]
+[[2,23],[25,30]]
 ```
 
 ## Build and runtime alternatives
@@ -88,8 +88,8 @@ After building the image, you can run the image
 example:
 
 ```
-# docker run --rm interval_merger -i "[[25,30],[2,19],[14,23],[4,8]]"
-[[2,23][25,30]]
+docker run --rm interval_merger -i "[[25,30],[2,19],[14,23],[4,8]]"
+[[2,23],[25,30]]
 ```
 
 
@@ -97,6 +97,7 @@ A ready to use docker image can be pulled from Docker Hub: https://hub.docker.co
 
 ```
 docker run --rm oitc/chn256234:latest -i "[[25,30],[2,19],[14,23],[4,8]]"
+[[2,23],[25,30]]
 ```
 
 ### Azure DevOps CI/CD pipeline script
