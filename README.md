@@ -118,8 +118,8 @@ This can also be used to build the docker container and automatically push to a 
     - Image: Ubuntu Server 18.04 LTS - Gen 1
     - Size: Standard_D4as_v4 - 4 vcpus, 16 GiB memory
     - OS disk type: Premium SSD
-  - runtime measurement with the Linux command: `time`
-  - memory consumption measurement with the Linux command: `/usr/bin/time -v`
+  - runtime measurement with the build-in Linux command: `time`
+  - memory consumption measurement with the Linux tool: `/usr/bin/time`
   - Data in subfolder: [`loadtest`](loadtest)
 
 
