@@ -15,7 +15,7 @@ resources:
 - repo: self
 
 variables:
-  VersionNumber: '1.0.0'
+  VersionNumber: '1.0.1'
   dockerServiceConnection: 'Docker Hub (OITC)'
 
 stages:
