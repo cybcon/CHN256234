@@ -140,6 +140,6 @@ This can also be used to build the docker container and automatically push to a 
 
 
 ## other solutions
-- Bastian Appenzeller, implemented in Python: https://github.com/bridgingIT/daimler_application
+<!-- - Bastian Appenzeller, implemented in Python: https://github.com/bridgingIT/daimler_application -->
 - Christian Will, implemented in C#: https://github.com/dnkh/MergeIntervals
 
